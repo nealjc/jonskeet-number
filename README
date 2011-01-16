@@ -1,0 +1,11 @@
+The so.py script parses a stack overflow data dump and determines
+each user's Jon Skeet number. 
+
+The Jon Skeet number is the Erdos Number of Stack Overflow. The Erdos Number
+is based on authorship of papers. To calculate a Jon Skeet number
+I define the "authorship" of answers. First, only questions that are not closed
+and not community wiki are considered. A question must also have an answer of
+at least 5 upvotes (doesn't matter if there is an accepted answer or not). The
+"authors" that answered that question are determined as follows. Say the top
+answer has X points. All users with an answer in the range [ceil(0.75*X), X]
+are considered authors.
